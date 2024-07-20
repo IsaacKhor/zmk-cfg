@@ -56,9 +56,9 @@
 
         sym {
             bindings = <
-&none  &none          &kp GRAVE     &kp LS(TILDE)  &kp LS(POUND)  &none    &none  &kp LS(PRCNT)  &kp LBKT      &kp RBKT       &none          &none
-&none  &kp LS(UNDER)  &kp LS(LBRC)  &kp LS(RBRC)   &kp LS(DLLR)   &none    &none  &kp MINUS      &kp LS(LPAR)  &kp LS(RPAR)   &kp LS(QMARK)  &none
-&none  &kp LS(EXCL)   &kp LS(AMPS)  &kp BSLH       &kp LS(COLON)  &none    &none  &kp LS(QMARK)  &kp LS(PIPE)  &kp LS(CARET)  &kp LS(AT)     &none
+&none  &none          &kp GRAVE     &kp LS(TILDE)  &kp LS(POUND)  &none    &none  &kp LS(PRCNT)  &kp LBKT      &kp RBKT       &none       &none
+&none  &kp LS(UNDER)  &kp LS(LBRC)  &kp LS(RBRC)   &kp LS(DLLR)   &none    &none  &kp MINUS      &kp LS(LPAR)  &kp LS(RPAR)   &kp FSLH    &none
+&none  &kp LS(EXCL)   &kp LS(AMPS)  &kp BSLH       &kp LS(COLON)  &none    &none  &kp LS(QMARK)  &kp LS(PIPE)  &kp LS(CARET)  &kp LS(AT)  &none
                                     &none          &none          &none    &none  &none          &none
             >;
         };
@@ -67,17 +67,17 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LG(LC(LEFT))  &kp LS(LG(LBKT))  &kp LS(LG(RBKT))  &kp RG(RC(RIGHT))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT          &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans            &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp TAB           &caps_word        &trans            &trans             &trans
                         &trans  &trans  &trans    &trans  &trans            &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp LA(LC(LG(LS(F1))))  &kp LS(LA(LC(LG(F2))))   &kp LS(LA(LC(LG(F3))))   &kp LC(LA(LS(LG(F4))))   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(LA(LC(LG(F5))))  &kp LS(LA(LC(LG(F6))))   &kp LS(LA(LC(LG(F7))))   &kp LS(LC(LA(LG(F8))))   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(LA(LC(LG(F9))))  &kp LS(LA(LC(LG(F10))))  &kp LS(LA(LC(LG(F11))))  &kp LS(LA(LC(LG(F12))))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                                         &trans                   &trans                   &trans    &trans  &trans  &trans
             >;
         };
 
