@@ -4,11 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+ #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -39,12 +36,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        base {
             bindings = <
 &kp TAB    &kp SQT       &kp COMMA    &kp DOT      &kp P         &kp Y              &kp F        &kp G         &kp C        &kp R        &kp L         &kp FSLH
 &kp ESC    &hml LCTRL A  &hml LALT O  &hml LCMD E  &hml LSHFT U  &kp I              &kp D        &hmr RSHFT H  &hmr RCMD T  &hmr RALT N  &hmr RCTRL S  &kp MINUS
 &kp LSHFT  &kp SEMI      &kp Q        &kp J        &kp K         &kp X              &kp B        &kp M         &kp W        &kp V        &kp Z         &kp RSHFT
-                                      &trans       &kp ESC       &lt 1 BACKSPACE    &lt 2 SPACE  &kp RET       &trans
+                                      &trans       &lt 3 ESCAPE  &lt 1 BACKSPACE    &lt 2 SPACE  &lt 4 ENTER   &trans
             >;
         };
 
@@ -65,5 +62,33 @@
                                     &none          &none          &none    &none  &none          &none
             >;
         };
+
+        fn {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LG(LC(LEFT))  &kp LS(LG(LBKT))  &kp LS(LG(RBKT))  &kp RG(RC(RIGHT))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans            &trans             &trans
+                        &trans  &trans  &trans    &trans  &trans            &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        meta {
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR    &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
+
